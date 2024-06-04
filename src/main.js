@@ -72,7 +72,7 @@ searchFormElem.addEventListener('submit', async event => {
 
 loadBtnElem.addEventListener('click', async event => {
   page += 1;
-  if (page > totalPages) {
+  if (page === totalPages) {
     iziToast.info({
       iconUrl: informSvg,
       position: 'topRight',
