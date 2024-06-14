@@ -94,7 +94,7 @@ loadBtnElem.addEventListener('click', async event => {
     });
   } catch (error) {
     iziToast.warning({
-      iconUrl: warningSvgSvg,
+      iconUrl: warningSvg,
       position: 'topRight',
       message: `${error}`,
     });
