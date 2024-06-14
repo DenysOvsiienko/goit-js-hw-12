@@ -2,7 +2,7 @@
 import { fetchImages } from './js/pixabay-api';
 import { renderImages } from './js/render-functions';
 import errorSvg from './img/errorSvg.svg';
-import cautionSvg from './img/cautionSvg.svg';
+import warningSvg from './img/warningSvg.svg';
 import informSvg from './img/informSvg.svg';
 // SimpleLightBox library
 import SimpleLightbox from 'simplelightbox';
@@ -62,7 +62,7 @@ searchFormElem.addEventListener('submit', async event => {
     }
   } catch (error) {
     iziToast.warning({
-      iconUrl: cautionSvg,
+      iconUrl: warningSvg,
       position: 'topRight',
       message: `${error}`,
     });
