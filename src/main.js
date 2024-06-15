@@ -61,6 +61,7 @@ searchFormElem.addEventListener('submit', async event => {
       loadBtnElem.classList.remove('visually-hidden');
     }
   } catch (error) {
+    standBySpanElem.classList.add('visually-hidden');
     iziToast.warning({
       iconUrl: warningSvg,
       position: 'topRight',
@@ -93,6 +94,7 @@ loadBtnElem.addEventListener('click', async event => {
       behavior: 'smooth',
     });
   } catch (error) {
+    standBySpanElem.classList.add('visually-hidden');
     iziToast.warning({
       iconUrl: warningSvg,
       position: 'topRight',
