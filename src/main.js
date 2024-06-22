@@ -44,13 +44,14 @@ searchFormElem.addEventListener('submit', async event => {
       limit
     );
     if (!fetchData.total) {
-      standBySpanElem.classList.remove('visually-hidden');
       iziToast.error({
         iconUrl: errorSvg,
         position: 'topRight',
         message:
           'Sorry, there are no images matching your search query. Please try again!',
       });
+      standBySpanElem.classList.add('visually-hidden');
+      return;
     }
     standBySpanElem.classList.add('visually-hidden');
     galleryElem.insertAdjacentHTML('beforeend', renderImages(fetchData));
